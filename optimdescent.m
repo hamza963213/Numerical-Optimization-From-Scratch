@@ -15,7 +15,6 @@
 %    result.temp : temps de calcul
 %    result.stop : condition d'arret ('TolX', 'TolG', 'TolF', 'Maxiter')
 % xval : valeurs des itérées
-% A COMPLETER
 
 function [xh,result,xval] = optimdescent(critfun,params,options,x0)
     %démarrage du chronomètre pour mesurer le temps de calcul
@@ -44,8 +43,10 @@ function [xh,result,xval] = optimdescent(critfun,params,options,x0)
     result.crit = [f_prec, f_h];
     result.grad= [norm(g_prec) , norm(g_h)];
     k = 1;
+    
     while k < options.maxiter && norm(g_h) > options.tolG && norm((xh-x_prec)/xh) > options.tolX && norm((f_h-f_prec)/f_h) > options.tolF
         switch options.method
+        
             case 'gradient'
                 %choix de la direction d
                 d = -g_h;
@@ -72,6 +73,7 @@ function [xh,result,xval] = optimdescent(critfun,params,options,x0)
                 result.crit = [result.crit, f_h]; %critère par itération 
                 result.grad = [result.grad, norm(g_h)]; %gradient par itération
                 xval = [xval, xh]; %sauvegarde des itérées
+                
             case 'gradient conjuge'       
                 %calcul de la direction d
                 betha_h = norm(g_h)^2/norm(g_prec)^2;
@@ -158,6 +160,7 @@ function [xh,result,xval] = optimdescent(critfun,params,options,x0)
                 result.crit = [result.crit, f_h]; %critère par itération 
                 result.grad = [result.grad, norm(g_h)]; %gradient par itération
                 xval = [xval, xh]; %sauvegarde des itérées
+                
             case 'Gauss-Newton'
                 %calcul de la direction d
                 d = linsolve((J_h)'*J_h, -g_h);
@@ -184,6 +187,7 @@ function [xh,result,xval] = optimdescent(critfun,params,options,x0)
                 result.crit = [result.crit, f_h]; %critère par itération 
                 result.grad = [result.grad, norm(g_h)]; %gradient par itération
                 xval = [xval, xh]; %sauvegarde des itérées
+                
             case 'Levenberg-Marquardt'
                 d = linsolve((J_h)'*J_h + lambda*diag((J_h)'*J_h), -g_h);
                  %vérifier que d est bien une descente
