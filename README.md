@@ -1,7 +1,7 @@
 # Benchmark of numerical optimization algorithms
 This repository provides a comparative analysis of various iterative descent optimization methods (Gradient Descent, Conjugate Gradient, Newton, Quasi-Newton, Gauss-Newton, Levenberg-Marquardt). These methods are implemented from scratch. 
 
-> **Academic Context:** This work was done during Lab 1 (TP1) of the **CSOPT** (Scientific Computing and Optimization) course at **Centrale Nantes** (2024-2025).
+> **Context:** This work was done during Lab 1 (TP1) of the **CSOPT** (Scientific Computing and Optimization) course at **Centrale Nantes** (2024-2025). The full work is available [here](
 
 *Note: The MATLAB code is commented in French. A Python translation with English comments will be added.*
 
@@ -18,7 +18,7 @@ Where:
 
 ### Rosenbrock function
 
-The algorithms performance is evaluated thgrough the minimiatiom of the Rosenbrock function (with parameters $n=2$ and $b=2$):
+The algorithms performance is evaluated through the minimiatiom of the Rosenbrock function (with parameters $n=2$ and $b=2$):
 $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 
 * **Global mimimum :** $(x_1, x_2) = (1, 1)$ avec $f(1, 1) = 0$.
