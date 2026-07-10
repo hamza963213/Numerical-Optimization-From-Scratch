@@ -16,7 +16,7 @@ Where:
 * **$d_k$** is the descent direction (determined by the gradient, the Hessian, etc., depending on the chosen method).
 * **$\alpha_k$** is the step size (fixed, or variable using a line search technique such as the Armijo condition).
 
-
+### Rosenbrock function
 
 These algorithm performance are evaluated thgrough the minimiatiom of the Rosenbrock function (with parameters $n=2$ and $b=2$):
 $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
