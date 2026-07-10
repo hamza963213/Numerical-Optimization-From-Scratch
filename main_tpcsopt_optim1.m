@@ -27,7 +27,7 @@ ylabel('norme du gradient de f')
 %affichage du gradient conjuge
 options.pas='variable';
 options.method='gradient conjuge';
-[xh_gc,result_gc,~] = optimdescent(params.fonction,2,options,x0);
+[xh_gc,result_gc,~] = optimdescent(params.fonction,2,options,x0); 
 figure(1)
 hold on 
 plot(result_gc.grad,'b-x')
