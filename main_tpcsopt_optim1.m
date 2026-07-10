@@ -137,11 +137,3 @@ legend('gradient', 'gradient conjuge', 'Newton pas unitaire', 'Newton pas variab
 % % figure()
 % % plot(result.crit,'r-o')
 
-
-
-
-
-
-
-
-% A COMPLETER
