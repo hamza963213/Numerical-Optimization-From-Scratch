@@ -25,7 +25,7 @@ $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 
 > **Visualization**
 
-> <img src="images/fonction_rosenbrock" alt="Plot f0" width="400">
+> <img src="images/fonction_rosenbrock.png" alt="Plot f0" width="400">
 > <img src="images/level_curves.png" alt="Level curves" width="400">
 ---
 
