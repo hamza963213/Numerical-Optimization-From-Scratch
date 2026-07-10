@@ -4,8 +4,6 @@ clear all
 % DEFINITION DES PARAMETRES DU PROBLEME
 params.fonction='rosenbrock';
 
-% A COMPLETER 
-
 
 % DEFINITION DE L ALGORITHME D OPTIMISATION 
 %options.method='gradient';
@@ -15,8 +13,7 @@ options.maxiter = 1e3;
 options.tolX= 1e-8;
 options.tolF = 1e-8;
 
-% A COMPLETER
-%
+
 x0 = [-4;10];
 % --------------------------affichage de g----------------------
 options.method='gradient';
@@ -26,6 +23,7 @@ figure(1)
 plot(result_g.grad,'r-o')
 xlabel('itération')
 ylabel('norme du gradient de f')
+
 %affichage du gradient conjuge
 options.pas='variable';
 options.method='gradient conjuge';
@@ -33,18 +31,21 @@ options.method='gradient conjuge';
 figure(1)
 hold on 
 plot(result_gc.grad,'b-x')
+
 %affichage du Newton pas unitaire
 options.pas='fixe';
 options.method='Newton';
 [xh_Nf,result_Nf,~] = optimdescent(params.fonction,2,options,x0);
 hold on 
 plot(result_Nf.grad,'g-s')
+
 %affichage du Newton pas variable
 options.pas='variable';
 options.method='Newton';
 [xh_Nv,result_Nv,~] = optimdescent(params.fonction,2,options,x0);
 hold on 
 plot(result_Nv.grad,'c-v')
+
 %affichage du Quasi-Newton
 options.pas='variable';
 options.method='Quasi-Newton';
@@ -61,24 +62,28 @@ figure()
 plot(result_g.crit,'r-o')
 xlabel('itération')
 ylabel('critère de f')
+
 %affichage du gradient conjuge
 options.pas='variable';
 options.method='gradient conjuge';
 [xh_gc,result_gc,~] = optimdescent(params.fonction,2,options,x0);
 hold on 
 plot(result_gc.crit,'b-x')
+
 %affichage du Newton pas unitaire
 options.pas='fixe';
 options.method='Newton';
 [xh_Nf,result_Nf,~] = optimdescent(params.fonction,2,options,x0);
 hold on 
 plot(result_Nf.crit,'g-s')
+
 %affichage du Newton pas variable
 options.pas='variable';
 options.method='Newton';
 [xh_Nv,result_Nv,~] = optimdescent(params.fonction,2,options,x0);
 hold on 
 plot(result_Nv.crit,'c-v')
+
 %affichage du Quasi-Newton
 options.pas='variable';
 options.method='Quasi-Newton';
