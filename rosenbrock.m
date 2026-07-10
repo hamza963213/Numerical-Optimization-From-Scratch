@@ -1,9 +1,8 @@
 % x : valeur de la variable d'optimisation
 % params : structure contenant les parametres necessaires pour evaluer la fonction objectif
 % f,g,h : valeur de la fonction objectif, son gradient et son hessien
-%
 
-% A COMPLETER
+
 function [f, g, H, J] = rosenbrock(x, params)
     n = numel(x);
     %calcul de f
@@ -11,6 +10,7 @@ function [f, g, H, J] = rosenbrock(x, params)
     for i=1:n-1
         f = f + params*(x(i+1) - x(i)^2)^2 + (1 - x(i))^2;
     end
+    
     %calcul de g
     g = zeros(n,1);
     g(1) = -4*params*x(1)*(x(2)-x(1)^2)-2*(1-x(1));
@@ -20,6 +20,7 @@ function [f, g, H, J] = rosenbrock(x, params)
             g(i) = -4*params*x(i)*(x(i+1)-x(i)^2)-2*(1-x(i)) + 2*params*(x(i)-x(i-1)^2);
         end
     end
+    
     %calcul de H
     H = zeros(n,n);
     %calcul des éléments diagonaux
@@ -37,7 +38,8 @@ function [f, g, H, J] = rosenbrock(x, params)
             end
         end
     end
-    %calcul de la jacobienne
+    
+    %calcul de la jacobienne J
     J = zeros(2*(n-1), n);
     for i = 1:n-1
         %première ligne du jacobien pour r1(x_i,x_{i+1})
