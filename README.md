@@ -18,14 +18,14 @@ Where:
 
 ### Rosenbrock function
 
-These algorithm performance are evaluated thgrough the minimiatiom of the Rosenbrock function (with parameters $n=2$ and $b=2$):
+The algorithms performance is evaluated thgrough the minimiatiom of the Rosenbrock function (with parameters $n=2$ and $b=2$):
 $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 
 * **Global mimimum :** $(x_1, x_2) = (1, 1)$ avec $f(1, 1) = 0$.
 
 > **Visualization**
 > ![Plot of f0](chemin/vers/fonction_rosenbrock.png) 
-> ![Level curves](chemin/vers/lignes_niveaux_rosenbrock.png)
+> ![Level curves](images/level_curves.png)
 
 ---
 
