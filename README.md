@@ -53,7 +53,7 @@ For this initial point, **second-order methods successfully converge** to the gl
 | Gauss-Newton | 103 | 1.0817 | (1.00, 1.00) | TolF |
 | Levenberg-Marquardt | 999 | 3.4641 | (1.00, 1.00) | TolF |
 
-> **Evolution for $x_0 = (-4, 10)$**
+
 > <img src="images/gradient_case1.png" alt="Gradient" width="300">
 > <img src="images/criterion_case1.png" alt="Criterion" width="300">
 
@@ -71,6 +71,6 @@ For this initial point, only the Newton method with a unit step converge to the 
 | Newton (variable step) | 1000 | 1.4584 | (-1.17e3, 1.38e6) | Maxiter |
 | Quasi-Newton | 136 | 1.7434 | (-2.39e3, 5.75e6) | TolF |
 
-> **Evolution for $x_0 = (15, 3)$**
+
 > <img src="images/gradient_case2.png" alt="Gradient" width="300">
 > <img src="images/criterion_case2.png" alt="Criterion" width="300">
