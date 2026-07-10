@@ -25,8 +25,7 @@ $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 
 > **Visualization**
 > ![Plot of f0](chemin/vers/fonction_rosenbrock.png) 
-> ![Level curves](images/level_curves.png)
-
+> <img src="images/level_curves.png" alt="Level curves" width="400">
 ---
 
 The convergence of the algorithms depend heavily on the initial point $x_0$. We consider two cases.
