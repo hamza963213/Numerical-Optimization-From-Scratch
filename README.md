@@ -23,8 +23,8 @@ $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 
 * **Global mimimum :** $(x_1, x_2) = (1, 1)$ avec $f(1, 1) = 0$.
 
-> <img src="images/fonction_rosenbrock.png" alt="Plot f0" width="400">
-> <img src="images/level_curves.png" alt="Level curves" width="400">
+> <img src="images/fonction_rosenbrock.png" alt="Plot f0" width="300">
+> <img src="images/level_curves.png" alt="Level curves" width="300">
 ---
 
 The convergence of the algorithms depend heavily on the initial point $x_0$. We consider two cases.
@@ -54,8 +54,8 @@ For this initial point, **second-order methods successfully converge** to the gl
 | Levenberg-Marquardt | 999 | 3.4641 | (1.00, 1.00) | TolF |
 
 > **Evolution for $x_0 = (-4, 10)$**
-> <img src="images/gradient_case1.png" alt="Gradient" width="400">
-> <img src="images/criterion_case1.png" alt="Criterion" width="400">
+> <img src="images/gradient_case1.png" alt="Gradient" width="300">
+> <img src="images/criterion_case1.png" alt="Criterion" width="300">
 
 
 #### Case 2 : Initial point $x_0 = (15, 3)$
@@ -72,5 +72,5 @@ For this initial point, only the Newton method with a unit step converge to the 
 | Quasi-Newton | 136 | 1.7434 | (-2.39e3, 5.75e6) | TolF |
 
 > **Evolution for $x_0 = (15, 3)$**
-> <img src="images/gradient_case2.png" alt="Gradient" width="400">
-> <img src="images/criterion_case2.png" alt="Criterion" width="400">
+> <img src="images/gradient_case2.png" alt="Gradient" width="300">
+> <img src="images/criterion_case2.png" alt="Criterion" width="300">
