@@ -6,7 +6,7 @@ This repository provides a comparative analysis of various iterative descent opt
 *Note: The MATLAB code is commented in French. A Python translation with English comments will be added.*
 
 
-#### General Optimization Principle
+### General Optimization Principle
 All methods implemented in this project rely on the principle of iterative update:
 
 $$x_{k+1} = x_k + \alpha_k d_k$$
@@ -16,7 +16,7 @@ Where:
 * **$d_k$** is the descent direction (determined by the gradient, the Hessian, etc., depending on the chosen method).
 * **$\alpha_k$** is the step size (fixed, or variable using a line search technique such as the Armijo condition).
 
-#### Rosenbrock function
+### Rosenbrock function
 
 These algorithm performance are evaluated thgrough the minimiatiom of the Rosenbrock function (with parameters $n=2$ and $b=2$):
 $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
@@ -32,7 +32,7 @@ $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 The convergence of the algorithms depend heavily on the initial point $x_0$. We consider two cases.
 
 
-##### Case 1 : Initial point $x_0 = (-4, 10)$
+#### Case 1 : Initial point $x_0 = (-4, 10)$
 
 For this initial point, **second-order methods successfully converge** to the global minimum (1, 1), while **first-order methods fail** to reach it within the allowed iterations (the gradient stagnates at $\nabla f \neq 0$). While all second-order methods converge, their computational efficiency varies.
 
@@ -58,7 +58,7 @@ For this initial point, **second-order methods successfully converge** to the gl
 > **Evolution for $x_0 = (-4, 10)$**
 > ![Gradient](chemin/vers/g_p2_-410.png) ![Criterion](chemin/vers/f_p2_-410.png)
 
-##### Case 2 : Initial point $x_0 = (15, 3)$
+#### Case 2 : Initial point $x_0 = (15, 3)$
 
 For this initial point, only the Newton method with a unit step converge to the global minimum. The others either diverge or terminate prematurely.
 
