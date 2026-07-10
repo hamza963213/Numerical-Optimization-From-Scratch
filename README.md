@@ -24,7 +24,8 @@ $$f(x_1, x_2) = 2(x_2 - x_1^2)^2 + (1 - x_1)^2$$
 * **Global mimimum :** $(x_1, x_2) = (1, 1)$ avec $f(1, 1) = 0$.
 
 > **Visualization**
-> ![Plot of f0](chemin/vers/fonction_rosenbrock.png) 
+
+> <img src="images/fonction_rosenbrock" alt="Plot f0" width="400">
 > <img src="images/level_curves.png" alt="Level curves" width="400">
 ---
 
