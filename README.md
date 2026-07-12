@@ -60,7 +60,7 @@ For this initial point, **second-order methods successfully converge** to the gl
 
 #### Case 2 : Initial point $x_0 = (15, 3)$
 
-For this initial point, only the Newton method with a unit step converge to the global minimum. The others either diverge or terminate prematurely.
+For this initial point, only the Newton method with a unit step converge to the global minimum. 
 
 
 | Method | Iterations | Computation Time (s) | Final Point | Termination |
